@@ -1,0 +1,75 @@
+body{
+	font-family: 'Poppins';
+	background-color: #f5f5f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.todo-list{
+	margin-top: 150px;
+	width: 450px;
+	padding: 20px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	background-color: #fff;
+}
+.list-head{
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	gap: 20px;
+}
+.entered-list{
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	outline: none;
+}
+.add-list{
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(6, 133, 55);
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+	opacity: .6;
+	pointer-events: none;
+}
+.add-list.active{
+	opacity: 1;
+	pointer-events: all;
+}
+.tasks{
+	width: 100%;
+	margin-top: 30px;
+}
+.item{
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.item p{
+	font-size: 16px;
+	font-weight: 500;
+	color: #111;
+}
+.item.completed .name {
+	text-decoration: line-through;
+	color: #11111190;
+}
+.item-btn{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.item-btn p{
+	cursor: pointer;
+	font-weight: 900;
+}
+.item-btn .Delete{
+	color: red;
+}
