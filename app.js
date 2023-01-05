@@ -19,7 +19,8 @@ addBtn.addEventListener('click', () =>{
         newEl.innerHTML = `
         <p>${input.value}</p>
 		<div class="item-btn">
-		<p class="Delete">DELETE</p>
+        <b class="done">DONE</b>
+		<b class="Delete">DELETE</b>
 		</div>
         `
         tasks.appendChild(newEl)
@@ -30,5 +31,12 @@ addBtn.addEventListener('click', () =>{
 tasks.addEventListener('click', (k) => {
     if(k.target.classList.contains('Delete')){
         k.target.parentElement.parentElement.remove()
+    }
+})
+
+//mark item as completed
+tasks.addEventListener('click', (k) => {
+    if(k.target.classList.contains('done')){
+        k.target.parentElement.parentElement.classList.toggle('completed')
     }
 })

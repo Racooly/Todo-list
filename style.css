@@ -57,9 +57,9 @@ body{
 	font-weight: 500;
 	color: #111;
 }
-.item.completed .name {
+.completed p {
 	text-decoration: line-through;
-	color: #11111190;
+	color: #11111180;
 }
 .item-btn{
 	display: flex;
@@ -72,4 +72,10 @@ body{
 }
 .item-btn .Delete{
 	color: red;
+}
+.item-btn .done{
+	color: green;
+}
+.item b{
+	cursor: pointer;
 }
