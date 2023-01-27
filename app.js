@@ -1,13 +1,16 @@
-let input = document.querySelector('.entered-list')
-let addBtn = document.querySelector('.add-list')
-let tasks = document.querySelector('.tasks');
+const input = document.querySelector('.entered-list')
+const addBtn = document.querySelector('.add-list')
+const tasks = document.querySelector('.tasks');
+const description = document.querySelector('.description')
 
-//btn disable 
+//btn disable and description
 input.addEventListener('keyup', ()=> {
     if(input.value.trim() != 0){
         addBtn.classList.add("active")
+        description.style.display = "inline"
     }else{
         addBtn.classList.remove("active")
+        description.style.display = "none"
     }
 })
 
@@ -17,10 +20,13 @@ addBtn.addEventListener('click', () =>{
         let newEl = document.createElement('div')
         newEl.classList.add('item')
         newEl.innerHTML = `
-        <p>${input.value}</p>
+        <div> 
+			<p class="name">${input.value}</p>
+			<p class="desc">${description.value}</p>
+		</div>
 		<div class="item-btn">
-        <b class="done">DONE</b>
-		<b class="Delete">DELETE</b>
+			<p class="done">DONE</p>
+			<p class="Delete">DELETE</p>
 		</div>
         `
         tasks.appendChild(newEl)
